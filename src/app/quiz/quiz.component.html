@@ -1,0 +1,114 @@
+
+<script>
+        $(function(){
+            var loading = $('#loadbar').hide();
+            $(document)
+            .ajaxStart(function () {
+                loading.show();
+            }).ajaxStop(function () {
+                loading.hide();
+            });
+            
+            $("label.btn").on('click',function () {
+                var choice = $(this).find('input:radio').val();
+                $('#loadbar').show();
+                $('#quiz').fadeOut();
+                setTimeout(function(){
+                   $( "#answer" ).html(  $(this).checking(choice) );      
+                    $('#quiz').show();
+                    $('#loadbar').fadeOut();
+                   /* something else */
+                }, 1500);
+            });
+        
+            $ans = 3;
+        
+            $.fn.checking = function(ck) {
+                if (ck != $ans)
+                    return 'INCORRECT';
+                else 
+                    return 'CORRECT';
+            }; 
+        });	
+        </script>
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        
+        <div class="container-fluid bg-info">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                 
+                <div class="modal-body">
+                    <div class="col-xs-3 col-xs-offset-5">
+                       <div id="loadbar" style="display: none;">
+                          <div class="blockG" id="rotateG_01"></div>
+                          <div class="blockG" id="rotateG_02"></div>
+                          <div class="blockG" id="rotateG_03"></div>
+                          <div class="blockG" id="rotateG_04"></div>
+                          <div class="blockG" id="rotateG_05"></div>
+                          <div class="blockG" id="rotateG_06"></div>
+                          <div class="blockG" id="rotateG_07"></div>
+                          <div class="blockG" id="rotateG_08"></div>
+                      </div>
+                  </div>
+                  <div class="quiz" id="quiz" data-toggle="buttons">
+        <div class="container">
+            <h1 >
+                Quiz of {{ category }}!
+            </h1>
+        
+            <div *ngIf="arrquiz">        <!-- ADD HEADERS -->
+                <!-- BIND ARRAY TO TABLE -->
+                <div *ngFor="let a of arrquiz">
+                    <div class="modal-header">
+                        <h3><span class="label label-warning" id="qid"></span> {{a.Question}}</h3>
+                    </div>
+                    
+                    
+                    <ul>
+                        <p>
+                            <label class="element-animation1 btn btn-lg btn-primary btn-block" style="width: 500px;
+                            "><span class="btn-label"></span>
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <input type="radio" name={{a.id}} value="A" (change)="add($event,value)">
+                                {{a.A}}
+                            </label>
+                        </p>
+                        <p>
+                            <label class="element-animation1 btn btn-lg btn-primary btn-block" style="width: 500px;
+                            "><span class="btn-label"></span>
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <input type="radio" name={{a.id}} value="B" (change)="add($event,value)">
+                                {{a.B}}
+                            </label>
+                        </p>
+                        <p>
+                            <label class="element-animation1 btn btn-lg btn-primary btn-block" style="width: 500px;
+                            "><span class="btn-label"></span>
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <input type="radio" name={{a.id}} value="C" (change)="add($event,value)">
+                                {{a.C}}
+                            </label>
+                        </p>
+                        <p>
+                            <label class="element-animation1 btn btn-lg btn-primary btn-block" style="width: 500px;
+                            "><span class="btn-label"></span>
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                <input type="radio" name={{a.id}} value="D" (change)="add($event,value)">
+                                {{a.D}}
+                            </label>
+                        </p>
+                       
+                    </ul>
+                    </div>
+            </div>
+            <p id="demo"></p>
+        </div>
+        <button (click)="show()">Submit</button>
+            </div>
+                </div>
+              
+          

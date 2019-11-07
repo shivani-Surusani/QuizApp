@@ -1,6 +1,4 @@
-import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { LoginComponent } from "./login/login.component";
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -9,7 +7,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { RegisterComponent } from './register/register.component';
 
-export const routes: Routes = [
+export const appRoutes: Routes = [
   {path: 'login',component : LoginComponent},
   {path: 'navbar', component : NavbarComponent},
   {path: 'home', component : HomeComponent },
@@ -20,8 +18,3 @@ export const routes: Routes = [
   {path:'', redirectTo:'/login',pathMatch:'full'}
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

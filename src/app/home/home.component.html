@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HOMEPAGE</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        
+</head>
+<body>
+        <div _ngcontent-nik-c1 class="modal-dialog">
+                <div _ngcontent-nik-c1 class="modal-content">
+                <div _ngcontent-nik-c1 class="modal-body">
+<div class="limiter" >
+    <div class="container-login100" >
+        <div class="wrap-login100">
+            <div class="login100-form-title" >
+
+                <form style="margin: 0 auto; width: 250px;">
+                    <div class="container" >
+                    <br><br>
+                    <h3>Select your Quiz topic </h3>
+                    <br>
+                    <select  id="demo" style="width: 200px;" (click)="setCategory($event,value)" required>
+                        <option hidden disabled selected value>Choose</option>
+                    <option *ngFor="let item of data" value="{{item.name}}" > {{item.name}}</option>
+                    </select>
+                    <br><br>
+                    <button  (click)="loadQuiz()"> Submit </button>
+                    </div>
+                </form>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
