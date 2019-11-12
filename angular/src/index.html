@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Newapp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    function validateForm()
+  {
+      var x=document.forms["myform"]["login"].value;  
+      if(x==null || x=="" )
+      {
+          alert("username can't be left blank");
+          return false;
+      }
+  
+      var y=document.forms["myform"]["password"].value;
+      if(y==null || y=="")
+      {
+          alert("password is mandatory");
+          return false;
+      }
+    
+    /*if(x.localeCompare("yash")){
+      alert("invalid");
+      return false;
+    }
+    if(y.localeCompare("yash")){
+      alert("invalid");
+      return false;
+    }*/
+    
+    
+      /*else
+      {
+      alert("login successfull");
+          return true;
+      }*/
+  
+  }
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

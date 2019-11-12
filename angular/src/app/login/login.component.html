@@ -1,0 +1,28 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+<div style="background-image:url('../assets/images/bg.jpg');">
+<div class="wrapper fadeInDown" >
+    <img style="width: 10%; height: auto; padding-bottom: 3%; padding-top: 5%;" src="../assets/images/team4-logo.png" id="team4-logo" alt="team4-logo" />
+    <div id="formContent">
+            <div class="fadeIn first">
+                    <img style="width: 15%; height: auto;" src="../assets/images/images.png" id="icon" alt="User Icon" />
+                  </div>
+                  
+                  <!-- Login Form -->
+                  <form name="myform">
+                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="login"  [(ngModel)]="user.username">
+                    <!--input type="text" id="password" class="fadeIn third" name="password" placeholder="password"-->
+                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" [(ngModel)]="user.password">
+                    <input type="submit" class="fadeIn fourth"  onclick = "return validateForm()" value="Log In" (click) = "verify()">
+                    <div *ngIf="!loggedin" style="color:brown">Error: Invalid Username or Password</div>
+                  </form>
+              
+                  <!-- Remind Passowrd -->
+                  <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                  </div>
+
+        </div>
+    </div>
+</div>

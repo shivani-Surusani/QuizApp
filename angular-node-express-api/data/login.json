@@ -1,0 +1,21 @@
+[{
+    "id":1,
+    "uname":"Saloni",
+    "psw":"1234"
+},
+
+{
+    "id":2,
+    "uname":"Pankaj",
+    "psw" : "1234"
+
+},
+
+{
+    "id":3,
+    "uname":"Shivani",
+    "psw" : "333"
+
+}
+
+]
