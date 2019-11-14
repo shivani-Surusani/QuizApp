@@ -18,16 +18,16 @@ export class QuizComponent implements OnInit {
   //title = 'Quiz of music';
   answers:String[];
   arrquiz: question [];
-  score:number;
+  correct:number;
   wrong:number;
   category:string;
   timer: any = null;
   startTime: Date;
   ellapsedTime = '00:00';
-  durationSec:number=60;
+  durationSec:number=300;
   duration = '';
   constructor (private httpService: HttpClient,private router: Router, public result: ResultService,private cat:homeService) {
-    this.score=0;
+    this.correct=0;
     this.wrong=0;
    }
   
@@ -92,18 +92,20 @@ show()
   clearInterval( this.timer);
   for (let i:number = 0; i < 5; i++) {
     if(this.arrquiz[i].correct==this.answers[i]){
-      this.score= this.score+5;
+      this.correct= this.correct+1;
       console.log(this.arrquiz[i].correct);
-      console.log(this.score);
+      console.log(this.correct);
     }
     else{
       this.wrong= this.wrong+1;
     }
   }
   //document.getElementById("demo").innerHTML = this.score.toString();
-  this.result.changeResult(this.score);
+  this.result.changeResult(this.correct);
+  this.result.setscore(this.correct);
+  console.log(this.result.getscore());
   this.result.changewrong(this.wrong);
-  this.router.navigate(['../result']);
+  
 
 } 
 }

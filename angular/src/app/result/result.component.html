@@ -6,11 +6,12 @@
         <div _ngcontent-nik-c1 class="modal-content">
         <div _ngcontent-nik-c1 class="modal-body">
 <div class="div2">
-<h3>Your Score is </h3>
-<h4>Score</h4><h4> {{scores}}</h4>
-<h4>Wrong Answers</h4> <h4>{{wrong}}</h4>
-</div>
+        <h2>{{r.message}}</h2>
+<h3>Your Score is {{r.score}}</h3>
+<h4 style="color:darkgreen">Correct Answers: {{r.correct}}</h4>
+<h4 style="color:rgb(202, 77, 19)">Wrong Answers: {{r.wrong}}</h4>
 <button type="button" (click)="redirect()">Start Again</button>
+</div>
 </div>
 </div>
 </div>

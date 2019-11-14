@@ -1,6 +1,6 @@
 const musicquiz=require("../data/musicquiz.json");
 const dancequiz=require("../data/dancequiz.json");
-
+const sportquiz=require("../data/sportsquiz.json");
 class QuizService{
     static getarea(data){
     try{
@@ -10,7 +10,9 @@ class QuizService{
             return musicquiz;
         else if(data==="dance")
             return dancequiz;
-        else 
+        else if(data==="sports")
+            return sportquiz;
+        else
             return {};
     }
             catch(err){

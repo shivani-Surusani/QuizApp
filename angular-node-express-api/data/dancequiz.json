@@ -1,31 +1,31 @@
 [{
     "id":0,
-    "Question": "what is your favorite form of dance?",
+    "Question": "categories of ballroom dance are Latin and what?",
     "A": "Classical",
     "B": "Hiphop",
-    "C": "Contemporary",
+    "C": "smooth",
     "D": "Musical",
-    "correct": "B",
+    "correct": "C",
     "answered": ""
 },
 {
     "id":1,
-    "Question": "Do you like hiphop?",
-    "A":"Yes",
-    "B": "No",
-    "C": "Maybe",
-    "D": "lalala",
+    "Question": "In the Bolshoi ballet,the word Bolshoi mean?",
+    "A":"big",
+    "B": "small",
+    "C": "great",
+    "D": "none",
     "correct": "A",
     "answered":""
 },
 {
     "id":2,
-    "Question": "what city dancing you like?",
-    "A": "Greenville",
-    "B": "Chicago",
+    "Question": "Dance represents fertility through death and rebirth?",
+    "A": "Morris dancing",
+    "B": "Classical",
     "C": "Edison",
     "D": "lalala",
-    "correct": "D",
+    "correct": "A",
     "answered":""
 },
 {
@@ -34,7 +34,7 @@
     "A": "Hiphop",
     "B": "Guitar",
     "C": "xyz",
-    "D": "lalala",
+    "D": "chicago",
     "correct": "D",
     "answered":""
 },

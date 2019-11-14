@@ -1,0 +1,51 @@
+[{
+    "id":0,
+    "Question": "2010 Commonwealth Games held in ?",
+    "A": "Canada",
+    "B": "India",
+    "C": "Britian",
+    "D": "Malaysia",
+    "correct": "B",
+    "answered": ""
+},
+{
+    "id":1,
+    "Question": "The term “Googly” is associated with ?",
+    "A":"Cricket",
+    "B": "Football",
+    "C": "Badminton",
+    "D": "Hockey",
+    "correct": "A",
+    "answered":""
+},
+{
+    "id":2,
+    "Question": "In 1924 the first winter Olympics was held in ?",
+    "A": "Italy",
+    "B": "France",
+    "C": "Austria",
+    "D": "Canada",
+    "correct": "B",
+    "answered":""
+},
+{
+    "id":3,
+    "Question": "India first took part in the olympic games in the year ?",
+    "A": "1920",
+    "B": "1928",
+    "C": "1970",
+    "D": "1972",
+    "correct": "A",
+    "answered":""
+},
+{
+    "id":4,
+    "Question": "The ASIAD is held every ?",
+    "A": "2 years",
+    "B": "3 years",
+    "C": "4 years",
+    "D": "5 years",
+    "correct": "C",
+    "answered":""
+}
+]

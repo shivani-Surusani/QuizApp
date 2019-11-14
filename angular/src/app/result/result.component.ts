@@ -3,6 +3,7 @@ import { QuizComponent } from '../quiz/quiz.component';
 import { ResultService } from '../service/result.service';
 import { Router } from '@angular/router'
 import { HomeComponent } from '../home/home.component'
+import { result } from '../models/result';
 
 @Component({
   selector: 'app-result',
@@ -10,15 +11,14 @@ import { HomeComponent } from '../home/home.component'
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-    scores : number;
-     wrong : number;
+    r:result;
   constructor(public result: ResultService,public router: Router) {
    }
   
 
   ngOnInit() {
-    this.result.currentResult.subscribe(message => this.scores= message);
-    this.result.CR.subscribe(m=>this.wrong=m);
+    //this.result.currentResult.subscribe(message => this.scores= message);
+    this.r=this.result.getscore();
   }
 
   redirect(){
