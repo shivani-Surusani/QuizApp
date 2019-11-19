@@ -29,12 +29,12 @@ export class ResultService {
       return this.result;
  
   }
-  setscore(correct:number){
+  setscore(correct){
     console.log('inside result service');
     console.log(correct);
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     let options = { headers: headers };
-    let body={"correct":correct};
+    let body=correct;
     this.http.post('http://localhost:4200/api/v1/endpoint3/',body, options).subscribe(
       data => {
         this.changescore(data as result);	 // FILL THE ARRAY WITH DATA.

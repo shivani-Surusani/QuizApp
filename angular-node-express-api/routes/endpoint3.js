@@ -1,20 +1,21 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var router = express.Router();
+
+var ResultService = require('../services/result.service');
+
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 router.post('/', function(req, res) {
-var correct=parseInt(req.body.correct);
-
     console.log('entered endpoint3');
-    console.log(correct);
-    var score=correct*5;
-    console.log(score);
-    var wrong=5-correct;
-    console.log(wrong);
-    if(score>=15){
-        res.send({message:'Congratulations! You have passed the quiz',score:score,correct: correct,wrong:wrong});
+    console.log(req.body.choice[2]);
+    var category=req.body.category;
+    var arr2 = [];
+    for (let i = 0; i < 5; i++) {
+        arr2.push(req.body.choice[i])
     }
-    res.send({message:'Sorry! you have failed the quiz',score:score,correct: correct,wrong:wrong});
+    const resp= ResultService.getresults(arr2,category);
+    console.log(resp);
+    res.send(resp);
 });
 module.exports = router;

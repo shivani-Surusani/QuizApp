@@ -16,11 +16,10 @@ import { homeService } from '../service/home.service'
 export class QuizComponent implements OnInit {
 
   //title = 'Quiz of music';
-  answers:String[];
+  answers={"choice":['','','','',''], "category":''};
   arrquiz: question [];
   correct:number;
   wrong:number;
-  category:string;
   timer: any = null;
   startTime: Date;
   ellapsedTime = '00:00';
@@ -33,10 +32,11 @@ export class QuizComponent implements OnInit {
   
 
   ngOnInit() {
-    this.cat.currentcategory.subscribe(message => this.category = message)
-    this.answers=["","","","",""];
-    this.cat.getquiz(this.category).subscribe(
+    this.cat.currentcategory.subscribe(message => this.answers.category = message)
+    this.answers.choice=["","","","",""];
+    this.cat.getquiz(this.answers.category).subscribe(
       data => {
+        
         this.arrquiz = data as question [];	 // FILL THE ARRAY WITH DATA.
           console.log(this.arrquiz[1].correct);
           this.startTime = new Date();
@@ -84,13 +84,13 @@ add(event) {
   var x = event.target;
   //document.getElementById("demo").innerHTML = "for this question"+x.name+"this answer was selected"+x.value;
   //this.selection.push(x.name);
-  this.answers[x.name]=x.value;
+  this.answers.choice[x.name]=x.value;
 }
 
 show()
 {
   clearInterval( this.timer);
-  for (let i:number = 0; i < 5; i++) {
+  /*for (let i:number = 0; i < 5; i++) {
     if(this.arrquiz[i].correct==this.answers[i]){
       this.correct= this.correct+1;
       console.log(this.arrquiz[i].correct);
@@ -99,10 +99,11 @@ show()
     else{
       this.wrong= this.wrong+1;
     }
-  }
+  }*/
   //document.getElementById("demo").innerHTML = this.score.toString();
+
   this.result.changeResult(this.correct);
-  this.result.setscore(this.correct);
+  this.result.setscore(this.answers);
   console.log(this.result.getscore());
   this.result.changewrong(this.wrong);
   

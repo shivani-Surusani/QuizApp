@@ -13,7 +13,7 @@
                   <form name="myform">
                     <input type="text" id="login" class="fadeIn second" name="login" placeholder="login"  [(ngModel)]="user.username">
                     <!--input type="text" id="password" class="fadeIn third" name="password" placeholder="password"-->
-                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" [(ngModel)]="user.password">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" [(ngModel)]="user.password">
                     <input type="submit" class="fadeIn fourth"  onclick = "return validateForm()" value="Log In" (click) = "verify()">
                     <div *ngIf="!loggedin" style="color:brown">Error: Invalid Username or Password</div>
                   </form>
