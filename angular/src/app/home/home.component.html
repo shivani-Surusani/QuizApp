@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
+ <app-navbar></app-navbar>
 <head>
 <title>HOMEPAGE</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -27,7 +27,7 @@
                     <option *ngFor="let item of data" value="{{item.name}}" > {{item.name}}</option>
                     </select>
                     <br><br>
-                    <button  (click)="loadQuiz()"> Submit </button>
+                    <button type="button"  (click)="loadQuiz()"> Submit </button>
                     </div>
                 </form>
 
