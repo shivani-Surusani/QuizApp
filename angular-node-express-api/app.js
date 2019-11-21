@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 const session = require('express-session');
+var fs=require('fs');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -10,6 +11,7 @@ var endpoint2=require('./routes/endpoint2');
 var endpoint3=require('./routes/endpoint3');
 var app = express();
 
+var file=fs.createWriteStream('logs/nodelogfile.txt', { 'flags': 'a'});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({
@@ -25,6 +27,8 @@ app.use('/api/v1/endpoint2/', endpoint2);
 app.use('/api/v1/endpoint3/', endpoint3);
 
 app.listen(8000, () => {
-    console.log('Server started!')
+    let date= new Date();
+    console.log('Server started!');
+    file.write('\n'+date+'  Server Started!');
 });
 module.exports = app;

@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   logout(){
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     let options = { headers: headers,withCredentials: true };
-    this.http.post('http://localhost:4200/api/v1/endpoint1/logout',{}, options).subscribe(
+    this.http.post('http://localhost:4200/api/v1/endpoint1/logout',{withCredentials: true}).subscribe(
       data => {
         console.log("Logging out");
         this.router.navigate(['../login']);

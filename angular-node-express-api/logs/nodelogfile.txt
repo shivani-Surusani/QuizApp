@@ -1,0 +1,47 @@
+
+Thu Nov 21 2019 05:43:14 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 05:47:55 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:20:37 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:29:08 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:40:26 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:40:36 GMT-0500 (Eastern Standard Time) Username Saloni has chosen sports category.  Path is /?area=sports
+Thu Nov 21 2019 09:43:21 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:45:39 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:46:00 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:46:08 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 09:46:09 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:46:13 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:46:13 GMT-0500 (Eastern Standard Time) Username Saloni has chosen dance category.  Path is /?area=dance
+Thu Nov 21 2019 09:46:24 GMT-0500 (Eastern Standard Time) Username Saloni has submmited their dance quiz.  Path is /
+Thu Nov 21 2019 09:46:24 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:46:26 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:47:46 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:48:00 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 09:48:00 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:55:40 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:56:02 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 09:56:02 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 09:59:21 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 09:59:24 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 09:59:24 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:00:14 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 10:00:30 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 10:00:30 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:01:13 GMT-0500 (Eastern Standard Time)  Server Started!
+Thu Nov 21 2019 10:01:30 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 10:01:30 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:01:32 GMT-0500 (Eastern Standard Time) Userlogged out.  Path is /logout
+Thu Nov 21 2019 10:02:31 GMT-0500 (Eastern Standard Time) Username Shivani has logged in.  Path is /?username=Shivani&password=333
+Thu Nov 21 2019 10:02:31 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:02:43 GMT-0500 (Eastern Standard Time) Username Saloni has logged in.  Path is /?username=Saloni&password=1234
+Thu Nov 21 2019 10:02:43 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:02:51 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:02:52 GMT-0500 (Eastern Standard Time) Username Saloni has chosen sports category.  Path is /?area=sports
+Thu Nov 21 2019 10:02:57 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:02:57 GMT-0500 (Eastern Standard Time) Username Shivani has chosen dance category.  Path is /?area=dance
+Thu Nov 21 2019 10:03:22 GMT-0500 (Eastern Standard Time) Username Saloni has submmited their sports quiz.  Path is /
+Thu Nov 21 2019 10:03:22 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:03:36 GMT-0500 (Eastern Standard Time) Username Shivani has submmited their dance quiz.  Path is /
+Thu Nov 21 2019 10:03:36 GMT-0500 (Eastern Standard Time) Session check.  Path is /login
+Thu Nov 21 2019 10:03:44 GMT-0500 (Eastern Standard Time) Userlogged out.  Path is /logout
+Thu Nov 21 2019 10:03:48 GMT-0500 (Eastern Standard Time) Userlogged out.  Path is /logout
