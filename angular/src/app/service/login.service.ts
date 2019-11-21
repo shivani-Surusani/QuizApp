@@ -13,7 +13,7 @@ export class loginService {
     let params = new HttpParams();
     params = params.append('username', user.username);
     params = params.append('password', user.password);
-    return this.http.get('http://localhost:4200/api/v1/endpoint1/',{params: params});
+    return this.http.get('http://localhost:4200/api/v1/endpoint1/',{params: params, withCredentials: true});
  
   }
 }

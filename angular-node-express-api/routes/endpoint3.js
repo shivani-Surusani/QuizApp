@@ -6,7 +6,18 @@ var ResultService = require('../services/result.service');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
-router.post('/', function(req, res) {
+
+const authMiddleware = (req, res, next) => {
+	if(req.session && req.session.user) {
+	  next();
+	} else {
+	  res.status(403).send({
+		errorMessage: 'You must be logged in.'
+	  });
+	}
+};
+
+router.post('/',authMiddleware, function(req, res) {
     console.log('entered endpoint3');
     console.log(req.body.choice[2]);
     var category=req.body.category;

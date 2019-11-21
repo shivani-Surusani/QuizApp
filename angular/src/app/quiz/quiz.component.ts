@@ -16,6 +16,7 @@ import { homeService } from '../service/home.service'
 export class QuizComponent implements OnInit {
 
   //title = 'Quiz of music';
+  loggedin:boolean=false;
   answers={"choice":['','','','',''], "category":''};
   arrquiz: question [];
   correct:number;
@@ -25,13 +26,24 @@ export class QuizComponent implements OnInit {
   ellapsedTime = '00:00';
   durationSec:number=300;
   duration = '';
-  constructor (private httpService: HttpClient,private router: Router, public result: ResultService,private cat:homeService) {
+  constructor (private http: HttpClient,private router: Router, public result: ResultService,private cat:homeService) {
     this.correct=0;
     this.wrong=0;
    }
   
 
   ngOnInit() {
+    this.http.get('http://localhost:4200/api/v1/endpoint1/login',{withCredentials: true}).subscribe(
+        (resp: any) => {
+            this.loggedin =  resp.loggedIn;
+            if(!this.loggedin){
+                this.router.navigate(['../error']);
+            }
+          }, 
+          (err: HttpErrorResponse) => {
+            console.log (err.message);
+          }
+    );
     this.cat.currentcategory.subscribe(message => this.answers.category = message)
     this.answers.choice=["","","","",""];
     this.cat.getquiz(this.answers.category).subscribe(

@@ -2,7 +2,17 @@ var express = require('express');
 var router = express.Router();
 var QuizService = require('../services/quiz.service');
 
-router.get('/', async (req, res) =>
+const authMiddleware = (req, res, next) => {
+	if(req.session && req.session.user) {
+	  next();
+	} else {
+	  res.status(403).send({
+		errorMessage: 'You must be logged in.'
+	  });
+	}
+};
+
+router.get('/', authMiddleware, async (req, res) =>
 {
 	try
 	{

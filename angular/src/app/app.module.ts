@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResultService } from './service/result.service';
 import { homeService } from './service/home.service';
 import { loginService } from './service/login.service';
+import { AngularWebStorageModule } from 'angular-web-storage';
+import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +25,16 @@ import { loginService } from './service/login.service';
     HomeComponent,
     QuizComponent,
     ResultComponent,
-    RegisterComponent
+    RegisterComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    AngularWebStorageModule
   ],
   providers: [ResultService,homeService,loginService],
   bootstrap: [AppComponent]

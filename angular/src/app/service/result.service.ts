@@ -33,7 +33,7 @@ export class ResultService {
     console.log('inside result service');
     console.log(correct);
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    let options = { headers: headers };
+    let options = { headers: headers,withCredentials: true };
     let body=correct;
     this.http.post('http://localhost:4200/api/v1/endpoint3/',body, options).subscribe(
       data => {

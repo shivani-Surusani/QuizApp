@@ -1,7 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild,Input} from '@angular/core';
 import { Router } from '@angular/router';
-import {QuizComponent} from '../quiz/quiz.component'
-import { homeService } from '../service/home.service'
+import {QuizComponent} from '../quiz/quiz.component';
+import { homeService } from '../service/home.service';
+import { HttpClient,HttpParams } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
+
 
 @Component({
 selector: 'app-home',
@@ -10,7 +13,7 @@ styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
-constructor(private router: Router, private cat:homeService) { }
+constructor(private router: Router, private cat:homeService, private http: HttpClient) { }
 
 topic: string;
 SelectedCategory:string;
@@ -21,7 +24,21 @@ data = [
 {id: 2, name: 'music'}
 ];
 
-ngOnInit() {}
+loggedin:boolean=false;
+ngOnInit() {
+    this.http.get('http://localhost:4200/api/v1/endpoint1/login',{withCredentials: true}).subscribe(
+        (resp: any) => {
+            this.loggedin =  resp.loggedIn;
+            if(!this.loggedin){
+                this.router.navigate(['../error']);
+            }
+          }, 
+          (err: HttpErrorResponse) => {
+            console.log (err.message);
+          }
+    );
+ 
+}
 
 setCategory(event){
 var x=event.target;

@@ -19,7 +19,7 @@ export class homeService {
     console.log(area);
     let params = new HttpParams();
     params = params.append('area', area);
-    return this.http.get('http://localhost:4200/api/v1/endpoint2/',{params: params});
+    return this.http.get('http://localhost:4200/api/v1/endpoint2/',{params: params, withCredentials: true});
   }
 
 }

@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+const session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -11,7 +12,11 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use(session({
+    secret: "Shh, its a secret!",
+    resave: false,
+    saveUninitialized: true
+}));
 app.use(cookieParser())
 
 app.use('/api/v1/users', users);
