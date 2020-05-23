@@ -17,8 +17,8 @@ import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorag
 export class LoginComponent implements OnInit {
 
   arrlogin: login [];
-  user={username:'',
-  password:''};
+  user={username:null,
+  password:null};
   uname: string[];
   loggedin:Boolean=true;
   constructor(private httpService: HttpClient, private router: Router, private lserv: loginService,public local: LocalStorageService) { }
@@ -39,6 +39,7 @@ verify(){
     x:Boolean;
     console.log(this.user.username);
     console.log(this.user.password);
+    if(this.user.username!=null&&this.user.password!=null){
     this.lserv.getvalidation(this.user).subscribe(
       data => {
         console.log('This is login component')
@@ -57,8 +58,9 @@ verify(){
           this.router.navigate(['/login']);
         }
       }
+    
     );
- 
+    }
     /*
     for (let i = 0; i < 4; i++) {
            //console.log(this.arrlogin[i].uname);
